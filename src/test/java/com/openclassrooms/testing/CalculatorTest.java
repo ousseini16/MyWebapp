@@ -1,5 +1,6 @@
 package com.openclassrooms.testing;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.text.MessageFormat;
@@ -21,6 +22,7 @@ public class CalculatorTest {
 	private static Instant startedAt;
 
 	private Calculator calculatorUnderTest;
+
 
 	@BeforeEach
 	public void initCalculator() {
@@ -58,7 +60,7 @@ public class CalculatorTest {
 		int somme = calculatorUnderTest.add(a, b);
 
 		// Assert
-		assertEquals(5, somme);
+assertThat(somme).isEqualTo(5);
 	}
 
 	@Test
@@ -71,7 +73,7 @@ public class CalculatorTest {
 		int produit = calculatorUnderTest.multiply(a, b);
 
 		// Assert
-		assertEquals(462, produit);
+		assertThat(produit).isEqualTo(462);
 	}
 
 	@ParameterizedTest(name = "{0} x 0 doit être égal à 0")
