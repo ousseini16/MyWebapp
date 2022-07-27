@@ -10,12 +10,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -53,6 +48,7 @@ public class CalculatorTest {
 	}
 
 	@Test
+	@Tag("quatre_operations")
 	public void testAddTwoPositiveNumbers() {
 		// Arrange
 		int a = 2;
@@ -67,6 +63,7 @@ public class CalculatorTest {
 	}
 
 	@Test
+	@Tag("quatre_operations")
 	public void multiply_shouldReturnTheProduct_ofTwoIntegers() {
 		// Arrange
 		int a = 42;
